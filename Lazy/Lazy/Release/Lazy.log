@@ -1,0 +1,32 @@
+﻿  Building 'Lazy' with toolset 'WindowsKernelModeDriver10.0' and the 'Desktop' target platform.
+  Stamping Release\Lazy.inf [Version] section with DriverVer=03/20/2018,17.3.25.889
+  hook.c
+D:\五千年木\事务\内核级恶意程序监控与分析系统\Lazy\Lazy\Lazy\hook.c(196): warning C4047: “=”:“ULONG”与“PVOID”的间接级别不同
+D:\五千年木\事务\内核级恶意程序监控与分析系统\Lazy\Lazy\Lazy\hook.c(286): warning C4047: “=”:“DWORD”与“HANDLE”的间接级别不同
+D:\五千年木\事务\内核级恶意程序监控与分析系统\Lazy\Lazy\Lazy\hook.c(289): warning C4047: “=”:“PUCHAR *”与“PUCHAR”的间接级别不同
+D:\五千年木\事务\内核级恶意程序监控与分析系统\Lazy\Lazy\Lazy\hook.c(290): warning C4047: “=”:“PUCHAR *”与“DWORD”的间接级别不同
+D:\五千年木\事务\内核级恶意程序监控与分析系统\Lazy\Lazy\Lazy\hook.c(309): warning C4047: “=”:“DWORD”与“HANDLE”的间接级别不同
+D:\五千年木\事务\内核级恶意程序监控与分析系统\Lazy\Lazy\Lazy\hook.c(356): warning C4047: “函数”:“DWORD”与“HANDLE”的间接级别不同
+D:\五千年木\事务\内核级恶意程序监控与分析系统\Lazy\Lazy\Lazy\hook.c(356): warning C4024: “FindPInfoByPid”: 形参和实参 1 的类型不同
+D:\五千年木\事务\内核级恶意程序监控与分析系统\Lazy\Lazy\Lazy\hook.c(356): warning C4024: “FindPInfoByPid”: 形参和实参 2 的类型不同
+D:\五千年木\事务\内核级恶意程序监控与分析系统\Lazy\Lazy\Lazy\hook.c(358): warning C4047: “函数”:“DWORD”与“HANDLE”的间接级别不同
+D:\五千年木\事务\内核级恶意程序监控与分析系统\Lazy\Lazy\Lazy\hook.c(358): warning C4024: “AddScore”: 形参和实参 1 的类型不同
+D:\五千年木\事务\内核级恶意程序监控与分析系统\Lazy\Lazy\Lazy\hook.c(359): warning C4047: “函数”:“DWORD”与“HANDLE”的间接级别不同
+D:\五千年木\事务\内核级恶意程序监控与分析系统\Lazy\Lazy\Lazy\hook.c(359): warning C4024: “AddScore”: 形参和实参 1 的类型不同
+D:\五千年木\事务\内核级恶意程序监控与分析系统\Lazy\Lazy\Lazy\hook.c(379): warning C4047: “=”:“DWORD”与“HANDLE”的间接级别不同
+D:\五千年木\事务\内核级恶意程序监控与分析系统\Lazy\Lazy\Lazy\hook.c(387): warning C4047: “==”:“HANDLE”与“DWORD”的间接级别不同
+D:\五千年木\事务\内核级恶意程序监控与分析系统\Lazy\Lazy\Lazy\hook.c(399): warning C4047: “=”:“DWORD”与“HANDLE”的间接级别不同
+D:\五千年木\事务\内核级恶意程序监控与分析系统\Lazy\Lazy\Lazy\hook.c(406): warning C4047: “=”:“HANDLE”与“DWORD”的间接级别不同
+D:\五千年木\事务\内核级恶意程序监控与分析系统\Lazy\Lazy\Lazy\hook.c(407): warning C4047: “=”:“HANDLE”与“DWORD”的间接级别不同
+  main.c
+D:\五千年木\事务\内核级恶意程序监控与分析系统\Lazy\Lazy\Lazy\main.c(107): warning C4047: “函数”:“PDEVICE_OBJECT”与“PDEVICE_OBJECT *”的间接级别不同
+D:\五千年木\事务\内核级恶意程序监控与分析系统\Lazy\Lazy\Lazy\main.c(107): warning C4024: “IoDeleteDevice”: 形参和实参 1 的类型不同
+D:\五千年木\事务\内核级恶意程序监控与分析系统\Lazy\Lazy\Lazy\main.c(280): warning C4130: “==”: 字符串常量地址的逻辑操作
+D:\五千年木\事务\内核级恶意程序监控与分析系统\Lazy\Lazy\Lazy\main.c(280): warning C4047: “==”:“int”与“unsigned short [2]”的间接级别不同
+  public.c
+  正在生成代码...
+d:\五千年木\事务\内核级恶意程序监控与分析系统\lazy\lazy\lazy\public.c(287): warning C4716: “DeleteNode”: 必须返回一个值
+d:\五千年木\事务\内核级恶意程序监控与分析系统\lazy\lazy\lazy\main.c(276): warning C4716: “RegistryCallback”: 必须返回一个值
+d:\五千年木\事务\内核级恶意程序监控与分析系统\lazy\lazy\lazy\hook.c(168): warning C4715: “RvaToOffset”: 不是所有的控件路径都返回值
+  Lazy.vcxproj -> c:\Users\五千年木\documents\visual studio 2015\Projects\Lazy\Release\Lazy.sys
+  Lazy.vcxproj -> c:\Users\五千年木\documents\visual studio 2015\Projects\Lazy\Release\Lazy.pdb (Full PDB)

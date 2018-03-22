@@ -1,0 +1,90 @@
+;
+; Lazy.inf
+;
+
+[Version]
+Signature="$WINDOWS NT$"
+Class=Sample ; TODO: edit Class
+ClassGuid={78A1C341-4539-11d3-B88D-00C04FAD5171} ; TODO: edit ClassGuid
+Provider=%ManufacturerName%
+CatalogFile=Lazy.cat
+DriverVer=03/20/2018,17.3.25.889
+
+[DestinationDirs]
+DefaultDestDir = 12
+
+; ================= Class section =====================
+
+[ClassInstall32]
+Addreg=SampleClassReg
+
+[SampleClassReg]
+HKR,,,0,%ClassName%
+HKR,,Icon,,-5
+
+[SourceDisksNames]
+1 = %DiskName%,,,""
+
+[SourceDisksFiles]
+Lazy.sys  = 1,,
+
+;*****************************************
+; Install Section
+;*****************************************
+
+[Manufacturer]
+%ManufacturerName%=Standard,NTx86
+
+[Standard.NTx86]
+%Lazy.DeviceDesc%=Lazy_Device, Root\Lazy ; TODO: edit hw-id
+
+[Lazy_Device.NT]
+CopyFiles=Drivers_Dir
+
+[Drivers_Dir]
+Lazy.sys
+
+;-------------- Service installation
+[Lazy_Device.NT.Services]
+AddService = Lazy,%SPSVCINST_ASSOCSERVICE%, Lazy_Service_Inst
+
+; -------------- Lazy driver install sections
+[Lazy_Service_Inst]
+DisplayName    = %Lazy.SVCDESC%
+ServiceType    = 1               ; SERVICE_KERNEL_DRIVER
+StartType      = 3               ; SERVICE_DEMAND_START
+ErrorControl   = 1               ; SERVICE_ERROR_NORMAL
+ServiceBinary  = %12%\Lazy.sys
+
+;
+;--- Lazy_Device Coinstaller installation ------
+;
+
+[DestinationDirs]
+Lazy_Device_CoInstaller_CopyFiles = 11
+
+[Lazy_Device.NT.CoInstallers]
+AddReg=Lazy_Device_CoInstaller_AddReg
+CopyFiles=Lazy_Device_CoInstaller_CopyFiles
+
+[Lazy_Device_CoInstaller_AddReg]
+HKR,,CoInstallers32,0x00010000, "WdfCoInstaller01009.dll,WdfCoInstaller"
+
+[Lazy_Device_CoInstaller_CopyFiles]
+WdfCoInstaller01009.dll
+
+[SourceDisksFiles]
+WdfCoInstaller01009.dll=1 ; make sure the number matches with SourceDisksNames
+
+[Lazy_Device.NT.Wdf]
+KmdfService =  Lazy, Lazy_wdfsect
+[Lazy_wdfsect]
+KmdfLibraryVersion = 1.9
+
+[Strings]
+SPSVCINST_ASSOCSERVICE= 0x00000002
+ManufacturerName="<Your manufacturer name>" ;TODO: Replace with your manufacturer name
+ClassName="Samples" ; TODO: edit ClassName
+DiskName = "Lazy Installation Disk"
+Lazy.DeviceDesc = "Lazy Device"
+Lazy.SVCDESC = "Lazy Service"

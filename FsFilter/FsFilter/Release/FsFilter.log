@@ -1,0 +1,5 @@
+﻿  Building 'FsFilter' with toolset 'WindowsKernelModeDriver10.0' and the 'Desktop' target platform.
+  Stamping Release\FsFilter.inf [Version] section with DriverVer=03/20/2018,16.48.14.390
+  FsFilter.c
+  FsFilter.vcxproj -> C:\Users\五千年木\documents\visual studio 2015\Projects\FsFilter\Release\FsFilter.sys
+  FsFilter.vcxproj -> C:\Users\五千年木\documents\visual studio 2015\Projects\FsFilter\Release\FsFilter.pdb (Full PDB)
